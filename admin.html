@@ -10,33 +10,38 @@
 
 <body class="bushra">
 
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="./images/theLogo.png" class="logo">
+<div class="navbar">
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Menu</a>
-      <a href="#">About us</a>
-      <a href="#">Contact us</a>
+    <div class="nav-left">
+        <img src="./images/theLogo.png" class="logo">
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About us</a>
+            <a href="contact-us.html">Contact us</a>
+        </div>
     </div>
-  </div>
 
-  <div class="nav-icons">
-    <img src="./images/icons/search.png" class="icon-img">
-    <a href="#"><img src="./images/icons/profile.png" class="icon-img"></a>
-  </div>
-</nav>
+    <div class="nav-icons">
+        <input type="text" class="search" placeholder="Search...">
+
+        <button class="logout" onclick="window.location.href='index.html'">
+            Logout
+        </button>
+    </div>
+
+</div>
 
 <div class="container">
 
-
   <div class="form-card">
     <h2>➕ Add New Product</h2>
-      <div class="products">
-    <input type="text" placeholder="Product Name">
-    <input type="number" placeholder="Price">
-  </div>
+
+    <div class="products">
+      <input type="text" placeholder="Product Name">
+      <input type="number" placeholder="Price">
+    </div>
 
     <select>
       <option>Select Category</option>
@@ -44,10 +49,14 @@
       <option>Hot Drinks</option>
       <option>Bakery</option>
     </select>
+
     <input type="file" accept="image/*" class="file">
-<div>
-<button class="add-btn">+ Add Product</button>
-  </div></div>
+
+    <div>
+      <button class="add-btn">+ Add Product</button>
+    </div>
+  </div>
+
 
   <div class="table-card">
     <table>
@@ -63,133 +72,147 @@
 
       <tbody>
 
+        <tr>
+          <td>Strawberry Matcha Latte</td>
+          <td>24.40</td>
+          <td>Cold Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Iced Latte</td>
-    <td>21.40</td>
-    <td>Cold Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Iced Latte</td>
+          <td>21.40</td>
+          <td>Cold Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Iced Caramel Macchiato</td>
-    <td>16.90</td>
-    <td>Cold Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Iced Caramel Macchiato</td>
+          <td>16.90</td>
+          <td>Cold Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Iced Americano</td>
-    <td>16.10</td>
-    <td>Cold Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Iced Americano</td>
+          <td>16.10</td>
+          <td>Cold Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Strawberry Matcha Latte</td>
-    <td>24.40</td>
-    <td>Cold Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Iced Mocha</td>
+          <td>19.50</td>
+          <td>Cold Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Iced Mocha</td>
-    <td>19.50</td>
-    <td>Cold Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Espresso</td>
+          <td>13.10</td>
+          <td>Hot Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
+        <tr>
+          <td>Cortado</td>
+          <td>15.80</td>
+          <td>Hot Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Espresso</td>
-    <td>13.10</td>
-    <td>Hot Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Flat White</td>
+          <td>18.00</td>
+          <td>Hot Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Cortado</td>
-    <td>15.80</td>
-    <td>Hot Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Cappuccino</td>
+          <td>17.30</td>
+          <td>Hot Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Flat White</td>
-    <td>18.00</td>
-    <td>Hot Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Matcha Latte</td>
+          <td>21.80</td>
+          <td>Hot Drinks</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Cappuccino</td>
-    <td>17.30</td>
-    <td>Hot Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Almond Croissant</td>
+          <td>16.90</td>
+          <td>Bakery</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Matcha Latte</td>
-    <td>21.80</td>
-    <td>Hot Drinks</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Chocolate Brownie</td>
+          <td>15.00</td>
+          <td>Bakery</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
+        <tr>
+          <td>Chocolate Chip Cookies</td>
+          <td>13.10</td>
+          <td>Bakery</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Almond Croissant</td>
-    <td>16.90</td>
-    <td>Bakery</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Carrot Cake</td>
+          <td>20.60</td>
+          <td>Bakery</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Chocolate Brownie</td>
-    <td>15.00</td>
-    <td>Bakery</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
+        <tr>
+          <td>Blueberry Tart</td>
+          <td>14.60</td>
+          <td>Bakery</td>
+          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
+        </tr>
 
-  <tr>
-    <td>Chocolate Chip Cookies</td>
-    <td>13.10</td>
-    <td>Bakery</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
-
-  <tr>
-    <td>Carrot Cake</td>
-    <td>20.60</td>
-    <td>Bakery</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
-
-  <tr>
-    <td>Blueberry Tart</td>
-    <td>14.60</td>
-    <td>Bakery</td>
-    <td><button class="edit-btn"><i class="fa fa-pen"></i></button></td>
-    <td><button class="delete-btn"><i class="fa fa-trash"></i></button></td>
-  </tr>
-
-</tbody>
+      </tbody>
     </table>
   </div>
 
+</div>
+
+
+<input type="checkbox" id="delete-popup">
+
+
+<div class="popup-overlay">
+  <div class="popup-box">
+
+    <h3>Are you sure you want to delete this product?</h3>
+
+    <div class="popup-buttons">
+      <a href="#" class="yes-btn">Yes</a>
+      <label for="delete-popup" class="no-btn">No</label>
+    </div>
+
+  </div>
 </div>
 
 </body>

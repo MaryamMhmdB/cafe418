@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="edit">
+<head>
+<meta charset="UTF-8">
+<title>Edit Product</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="edit">
+
+<div class="navbar">
+
+  <div class="nav-left">
+    <img src="./images/theLogo.png" class="logo">
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About us</a>
+      <a href="contact-us.html">Contact us</a>
+    </div>
+  </div>
+
+
+    <div class="nav-icons">
+
+    <input type="text" class="search" placeholder="Search...">
+
+   <a href="admin.html" class="edit back-btn">Back</a>
+
+    </div>
+
+</div>
+<div class="edit edit-container">
+
+  <div class="edit edit-product-img">
+    <div class="edit img-box">
+      <img src="./images/strawberry-matcha.png" id="imagePreview" class="edit preview-img">
+    </div>
+  </div>
+
+
+  <div class="edit edit-product-info">
+    <h1 class="edit page-title">Edit Product</h1>
+<h2 class="product">Strawberry Matcha Latte</h2>
+    <input type="text" class="edit input" placeholder="Product Name">
+
+    <div class="edit edit-price-box">
+      <input type="number" class="edit input" placeholder="Price">
+    </div>
+
+    <textarea class="edit textarea" placeholder="Product description..."></textarea>
+    <textarea class="edit textarea" placeholder="Ingredients..."></textarea>
+<label class="edit label">Allergy Information</label>
+<textarea class="edit textarea" placeholder="e.g. Contains milk, strawberries, nuts..."></textarea>
+    <label class="edit label">Category</label>
+    <select class="edit select">
+      <option>Cold Drinks</option>
+      <option>Hot Drinks</option>
+      <option>Bakery</option>
+    </select>
+
+    <label class="edit label">Size</label>
+    <select class="edit select">
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+
+
+    <label for="imageInput" class="edit upload-btn">
+      Change Image
+    </label>
+    <input type="file" id="imageInput" accept="image/*" hidden>
+
+    <button class="edit edit-save">Save Changes</button>
+
+
+    
+
+  </div>
+
+</div>
+
+</body>
+</html>
