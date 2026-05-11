@@ -11,46 +11,23 @@
 </head>
 
 <body class="about-page">
-    <div class="navbar" >
-
-    <div class="nav-left">
-        <img src="./images/theLogo.png" class="logo">
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html" class="active">About us</a>
-            <a href="contact-us.html">Contact us</a>
-        </div>
-    </div>
-
-    <div class="nav-icons">
-        <a href="cart.html"><img src="./images/icons/cart.png" class="icon-img"></a>
-          <a href="profile.html"><img src="./images/icons/profile.png" class="icon-img"></a>
-    </div>
-    
-
-
-
+    <?php include "navbar.php" ?>
     <div class="cardform">
-
         <h1>About Us</h1>
-
         <p>
             Welcome to our 418 Café project! This project was developed by a talented group of students working together to create a unique and creative café concept.
         </p>
-
         <p>Implemented by:</p>
 
         <ul class="team-list">
-            <li>Haya Manea</li>
+            <li>Haya Abusaq</li>
             <li>Maha Barakat</li>
             <li>Mariam Barakat</li>
             <li>Mariam Basurih</li>
             <li>Bushra Baqeel</li>
         </ul>
 
-        <a href="index.html" class="btn">Back</a>
+        <a href="index.php" class="btn">Back</a>
 
     </div>
 </body>

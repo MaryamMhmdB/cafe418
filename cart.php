@@ -8,26 +8,8 @@
 
 <body>
 
-<div class="navbar">
 
-    <div class="nav-left">
-        <img src="./images/theLogo.png" class="logo">
-
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About us</a>
-            <a href="contact-us.html">Contact us</a>
-        </div>
-    </div>
-
-    <div class="nav-icons">
-        <img src="./images/icons/search.png" class="icon-img">
-        <img src="./images/icons/cart.png" class="icon-img" onclick="window.location.href='cart.html'">
-          <a href="profile.html"><img src="./images/icons/profile.png" class="icon-img"></a>
-    </div>
-
-</div>
+    <?php include "navbar.php" ?>
 
 
 <div class="cart-section">
@@ -39,7 +21,7 @@
 
         <div class="actions">
             <span>18 SAR</span>
-            <button class="edit-btn"><a href="Product_details.html">✏️</a></button>
+            <button class="edit-btn"><a href="Product_details.php">✏️</a></button>
             <button class="delete-btn">🗑️</button>
         </div>
     </div>
@@ -49,7 +31,7 @@
 
         <div class="actions">
             <span>36 SAR</span>
-            <button class="edit-btn"><a href="Product_details.html">✏️</a></button>
+            <button class="edit-btn"><a href="Product_details.php">✏️</a></button>
             <button class="delete-btn">🗑️</button>
         </div>
     </div>

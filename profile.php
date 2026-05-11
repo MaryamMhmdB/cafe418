@@ -12,26 +12,8 @@
 
 <body class="bushra">
 
-<div class="navbar">
+    <?php include "navbar.php" ?>
 
-  <div class="nav-left">
-    <img src="./images/theLogo.png" class="logo">
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About us</a>
-      <a href="contact-us.html">Contact us</a>
-    </div>
-  </div>
-
-  <div class="nav-icons">
-    <img src="./images/icons/search.png" class="icon-img" >
-    <img src="./images/icons/cart.png" class="icon-img" onclick="window.location.href='cart.html'">
-    <img src="./images/icons/profile.png" class="icon-img" onclick="window.location.href='profile.html'">
-  </div>
-
-</div>
 
 <div class="container">
 

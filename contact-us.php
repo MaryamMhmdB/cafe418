@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  lang="en" class="mm">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact us - Café 418</title>
+
+<link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+
+    <?php include "navbar.php" ?>
+
+<section class="contact-section">
+  <h2 class="title" >Contact Us</h2>
+
+  <div class="contact-container">
+
+  <div class="contact-left">
+
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p>We’d love to hear from you ☕</p>
+
+      
+      <p><strong>Email:</strong> cafe418@gmail.com</p>
+      <p><strong>X:</strong> @Cafe_418</p>
+      <p><strong>Instagram:</strong> @Cafe_418</p>
+      <p><strong>Phone:</strong> +966 512345678</p>
+      <p><strong>Our Location:</strong></p>
+          <div class="map-container">
+      <iframe title="Cafe 418 Location"
+        src="https://www.google.com/maps?q=%D9%82%D8%B3%D9%85%20%D8%A7%D9%84%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D8%AA%2C%20%D9%85%D8%A8%D9%86%D9%89%20650%2C%20%D9%83%D9%84%D9%8A%D8%A9%20%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D8%A8%20%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%2C%207550%20%D8%B7%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D9%85%D9%84%D9%83%20%D9%81%D9%8A%D8%B5%D9%84%2C%20%D8%A7%D9%84%D8%B5%D9%81%D8%A7%2C%20%D8%A7%D9%84%D8%AF%D9%85%D8%A7%D9%85%2034221&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+    </div>
+
+ 
+
+
+  </div>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+</div>
+
+</section>
+    </body>
+</html>
