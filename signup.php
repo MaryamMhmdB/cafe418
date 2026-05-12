@@ -1,9 +1,4 @@
-<?php require_once('config.inc.php');
-
-try {
-  $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
-
-  ?>
+<?php require_once('config.inc.php');?>
 
 <!DOCTYPE html>
 <html lang="en" class="mnna">
@@ -45,21 +40,3 @@ try {
 </body>
 
 </html>
-
-<?php
-} catch (Throwable $e) {
-    $code = $e->getCode();
-
-    if ($code == 404) {
-        http_response_code(404);
-        include __DIR__ . '/404.html';
-        exit;
-    }
-
-    if ($e instanceof PDOException) {
-        http_response_code(500);
-        include __DIR__ . '/pdo-error.html';
-        exit;
-    }
-}
-?>
