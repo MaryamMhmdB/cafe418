@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Page Not Found | Café 418</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f5efe6;
+      --beige: #e8ddd0;
+      --gold: #7a5c2e;
+      --dark: #2a1f14;
+      --brown: #5c3d1e;
+      --muted: #9e8a74;
+      --card-bg: rgba(255, 255, 255, 0.82);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(122, 92, 46, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(92, 61, 30, 0.07) 0%, transparent 55%);
+      font-family: 'Lato', sans-serif;
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    /* ─── CARD ─── */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+      padding: 3rem 3rem 2.75rem;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(42, 31, 20, 0.12);
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    .err-code {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(5rem, 16vw, 8rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .err-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 1.25rem;
+      border-radius: 2px;
+    }
+
+    .err-msg {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    /* ─── BUTTON ─── */
+    .btn-home {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 4px 18px rgba(122, 92, 46, 0.3);
+    }
+
+    .btn-home:hover {
+      background: var(--brown);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(92, 61, 30, 0.35);
+    }
+
+    /* Decorative beans */
+    .bean {
+      position: fixed;
+      border-radius: 50%;
+      opacity: 0.06;
+      background: var(--brown);
+      pointer-events: none;
+    }
+
+    .bean-1 {
+      width: 220px;
+      height: 220px;
+      top: -60px;
+      right: -60px;
+    }
+
+    .bean-2 {
+      width: 160px;
+      height: 160px;
+      bottom: -40px;
+      left: -40px;
+    }
+
+    .bean-3 {
+      width: 90px;
+      height: 90px;
+      bottom: 15%;
+      right: 10%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Decorative blobs -->
+  <div class="bean bean-1"></div>
+  <div class="bean bean-2"></div>
+  <div class="bean bean-3"></div>
+
+  <!-- Logo -->
+  <div class="logo-box">
+    <img src="images\theLogo.png" width="400px">
+  </div>
+
+  <!-- Main card -->
+
+
+  <div class="card">
+
+    <div class="err-code">404</div>
+    <div class="err-title">Page Not Found</div>
+    <div class="divider"></div>
+    <br>
+    <p class="err-msg">
+      Looks like this page wandered off,
+      perhaps it went for a coffee break!<br>
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+    <a href="./index.php" class="btn-home">← Back to Home</a>
+  </div>
+
+</body>
+
+</html>

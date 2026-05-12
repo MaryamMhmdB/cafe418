@@ -8,16 +8,12 @@
 <body class="login-page">
 <div class="cardform">
 
-    <form class="form" action="menu.php" method="get">
+    <form class="form" action="admin.php" method="get">
     <h2>Sign in</h2>
     <input type="email" placeholder="Email">
     <input type="password" placeholder="Password">
-    <button type="submit">Sign in</button>
-
-    <br>
-<a href="signup.html">Don't have an account? Create one!</a>
-
-<a href="role.html" class="back-link">← Back to role</a>
+    <button>Sign in</button>
+<a href="role.php" class="back-link">← Back to role</a>
 
   </form>
 

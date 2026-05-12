@@ -118,7 +118,7 @@
 
 <div class="cart-section">
 
-    <button class="btn" onclick="window.location.href='home.html'">
+    <button class="btn" onclick="window.location.href='home.php'">
         Buy Now
     </button>
 

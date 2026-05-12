@@ -76,7 +76,7 @@
           <td>Strawberry Matcha Latte</td>
           <td>24.40</td>
           <td>Cold Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -84,7 +84,7 @@
           <td>Iced Latte</td>
           <td>21.40</td>
           <td>Cold Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -92,7 +92,7 @@
           <td>Iced Caramel Macchiato</td>
           <td>16.90</td>
           <td>Cold Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -100,7 +100,7 @@
           <td>Iced Americano</td>
           <td>16.10</td>
           <td>Cold Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -108,7 +108,7 @@
           <td>Iced Mocha</td>
           <td>19.50</td>
           <td>Cold Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -116,7 +116,7 @@
           <td>Espresso</td>
           <td>13.10</td>
           <td>Hot Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -124,7 +124,7 @@
           <td>Cortado</td>
           <td>15.80</td>
           <td>Hot Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -132,7 +132,7 @@
           <td>Flat White</td>
           <td>18.00</td>
           <td>Hot Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -140,7 +140,7 @@
           <td>Cappuccino</td>
           <td>17.30</td>
           <td>Hot Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -148,7 +148,7 @@
           <td>Matcha Latte</td>
           <td>21.80</td>
           <td>Hot Drinks</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -156,7 +156,7 @@
           <td>Almond Croissant</td>
           <td>16.90</td>
           <td>Bakery</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -164,7 +164,7 @@
           <td>Chocolate Brownie</td>
           <td>15.00</td>
           <td>Bakery</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -172,7 +172,7 @@
           <td>Chocolate Chip Cookies</td>
           <td>13.10</td>
           <td>Bakery</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -180,7 +180,7 @@
           <td>Carrot Cake</td>
           <td>20.60</td>
           <td>Bakery</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 
@@ -188,7 +188,7 @@
           <td>Blueberry Tart</td>
           <td>14.60</td>
           <td>Bakery</td>
-          <td><a href="edit.html" class="edit-btn"><i class="fa fa-pen"></i></a></td>
+          <td><a href="edit.php" class="edit-btn"><i class="fa fa-pen"></i></a></td>
           <td><label for="delete-popup" class="delete-btn"><i class="fa fa-trash"></i></label></td>
         </tr>
 

@@ -15,12 +15,12 @@
 
 <div class="roles">
 
-  <a href="login.html" class="role">
+  <a href="login.php" class="role">
     <div class="role-title">Customer</div>
     <div class="role-desc">Browse menu & place orders</div>
   </a>
 
-  <a href="adminlogin.html" class="role">
+  <a href="adminlogin.php" class="role">
     <div class="role-title">Admin</div>
     <div class="role-desc">Manage orders & system</div>
   </a>

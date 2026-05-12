@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Unavailable | Café 418</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:   #f5efe6;
+      --beige:   #e8ddd0;
+      --gold:    #7a5c2e;
+      --dark:    #2a1f14;
+      --brown:   #5c3d1e;
+      --muted:   #9e8a74;
+      --red:     #a03030;
+      --red-bg:  rgba(160,48,48,0.07);
+      --card-bg: rgba(255,255,255,0.84);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(ellipse at 75% 30%, rgba(160,48,48,0.05) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 70%, rgba(122,92,46,0.07) 0%, transparent 55%);
+      font-family: 'Lato', sans-serif;
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-ring {
+      0%   { transform: scale(0.9); opacity: 0.6; }
+      50%  { transform: scale(1.05); opacity: 0.3; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%       { transform: translateX(-4px); }
+      40%       { transform: translateX(4px); }
+      60%       { transform: translateX(-3px); }
+      80%       { transform: translateX(3px); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* ─── CARD ─── */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+      padding: 3rem 3rem 2.75rem;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(42,31,20,0.12);
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    .err-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: var(--red-bg);
+      border: 1px solid rgba(160,48,48,0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 1rem;
+    }
+    .err-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+    .err-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .divider {
+      width: 50px; height: 2px;
+      background: var(--gold);
+      margin: 0 auto 1.25rem;
+      border-radius: 2px;
+    }
+    .err-msg {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ─── TECH DETAILS BOX ─── */
+    .details-box {
+      background: #fdf6ee;
+      border: 1px solid var(--beige);
+      border-left: 4px solid var(--red);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .details-box .detail-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    .details-box .detail-line {
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      color: var(--brown);
+      line-height: 1.8;
+    }
+    .details-box .detail-line strong {
+      color: var(--dark);
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-home {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 4px 18px rgba(122,92,46,0.28);
+    }
+    .btn-home:hover {
+      background: var(--brown);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(92,61,30,0.32);
+    }
+    .btn-retry {
+      display: inline-block;
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.78rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.22s, color 0.22s, transform 0.2s;
+    }
+    .btn-retry:hover {
+      background: var(--gold);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Decorative beans */
+    .bean {
+      position: fixed;
+      border-radius: 50%;
+      opacity: 0.055;
+      background: var(--brown);
+      pointer-events: none;
+    }
+    .bean-1 { width: 240px; height: 240px; top: -70px; right: -70px; }
+    .bean-2 { width: 180px; height: 180px; bottom: -50px; left: -50px; }
+  </style>
+</head>
+<body>
+
+  <div class="bean bean-1"></div>
+  <div class="bean bean-2"></div>
+
+  <!-- Logo -->
+    <div class="logo-box">
+    <img src="images\theLogo.png" width="400px">
+    </div>
+  
+  <!-- Main card -->
+  <div class="card">
+
+    <!-- Pulsing warning icon -->
+
+    <span class="err-label">Database Error</span>
+    <div class="err-title">Something Went Wrong</div>
+    <div class="err-subtitle">We couldn't connect to the kitchen</div>
+    <div class="divider"></div>
+    <p class="err-msg">
+      Our system ran into a database connection issue.<br>
+      Our team has been notified and is working to restore service.
+    </p>
+
+    <!-- Technical detail block -->
+    <div class="details-box">
+      <div class="detail-title">
+        <span class="dot"></span>
+        PDOException
+      </div>
+      <div class="detail-line"><strong>Error:</strong> SQLSTATE[HY000] [2002] Connection refused</div>
+      <div class="detail-line"><strong>Code:</strong> HY000</div>
+      <div class="detail-line"><strong>Status:</strong> Service Temporarily Unavailable</div>
+    </div>
+
+    <div class="btn-row">
+      <a href="/" class="btn-home">← Back to Home</a>
+      <button class="btn-retry" onclick="window.location.reload()">↻ Try Again</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -28,7 +28,7 @@
 
     <input type="text" class="search" placeholder="Search...">
 
-   <a href="admin.html" class="edit back-btn">Back</a>
+   <a href="admin.php" class="edit back-btn">Back</a>
 
     </div>
 

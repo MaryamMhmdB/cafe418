@@ -28,7 +28,7 @@
           <p>Your daily comfort in a cup.</p>
 
           <div class="buttons">
-            <a href="login.html">
+            <a href="login.php">
               <button class="btn-primary">Order Now</button>
             </a>
 
