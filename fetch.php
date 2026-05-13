@@ -1,31 +1,7 @@
 <?php
 
 require_once("config.inc.php");
-
-class Product {
-	public $productID;
-	public $PName;
-	public $Category;
-	public $Price;
-	public $Size;
-	public $stockQuantity;
-	public $PDesc;
-	public $ingredients;
-	public $Allergens;
-	public $PImg;
-	public $created_by;
-
-}
-
-class Admin{
-
-	public $adminID ;
-	public $Password ;
-	public $Phone ;
-	public $Email ;
-	public $FName ;
-	public $LName ;
-}
+require_once("classes.php");
 
 function fetchProducts($pdo) { //fetch all products from DB to array
 	$sql = "SELECT * FROM Products";

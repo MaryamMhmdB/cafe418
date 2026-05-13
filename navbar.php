@@ -11,6 +11,6 @@
     <nav class="nav-icons">
         <a><img src="./images/icons/search.png" class="icon-img"></a>
         <a href="cart.php"><img src="./images/icons/cart.png" class="icon-img"></a>
-        <a href="role.php"><img src="./images/icons/profile.png" class="icon-img"></a>
+        <a href="profile.php"><img src="./images/icons/profile.png" class="icon-img"></a>
     </nav>
 </nav>
