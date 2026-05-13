@@ -402,6 +402,7 @@ font-weight: 800;
   margin: 0;
   padding-top: 60px;
   overflow-x: hidden;
+  background:#FFFCF8;
 }
 
 .mm .home-content {
@@ -653,7 +654,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .mm .contact-section {
-  background: #fffcf8;
+  background: #FFFCF8;
   padding-top: 20px;
   text-align: center;
   color: #3e2c23;
@@ -736,7 +737,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .mm .menu-section {
-  background: #fff8ee;
+  background: #FFFCF8;
   padding: 40px 80px;
   max-width: 1200px;
   margin: auto;

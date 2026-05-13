@@ -43,7 +43,7 @@
       </summary>
 
       <div class="order-details">
-       <span class="header-date"> 📅 17th April 2026 </span> 
+        <span class="header-date"> 📅 17th April 2026 </span> 
         <div class="item"><span>☕ Iced Latte</span><span>21.40 SAR</span></div>
         <div class="item"><span>☕ Cappuccino</span><span>17.30 SAR</span></div>
         <div class="item"><span>🍫 Chocolate Brownie</span><span>15.60 SAR</span></div>

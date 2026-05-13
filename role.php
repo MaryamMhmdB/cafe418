@@ -1,3 +1,9 @@
+<?php 
+require_once('config.inc.php');
+require_once('fetch.php');
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="mnna">
 <head>

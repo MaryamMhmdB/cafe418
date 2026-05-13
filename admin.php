@@ -1,3 +1,9 @@
+<?php 
+  require_once('config.inc.php');
+  require_once('fetch.php');
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="bushra">
 <head>
@@ -36,6 +42,7 @@
 <div class="container">
 
   <div class="form-card">
+
     <h2>➕ Add New Product</h2>
 
     <div class="products">

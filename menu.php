@@ -18,7 +18,7 @@
 
     <h2 class="title">The Menu</h2>
 
-    <div class="menu-category">
+    <div class="menu-category" >
 
       <h3 class="category-title">Cold Drinks</h3>
 

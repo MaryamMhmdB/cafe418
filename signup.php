@@ -1,4 +1,9 @@
-<?php require_once('config.inc.php');?>
+<?php 
+  require_once('config.inc.php');
+  require_once('fetch.php');
+  session_start();
+  $_SESSION['role']="customer";
+?>
 
 <!DOCTYPE html>
 <html lang="en" class="mnna">
@@ -8,7 +13,6 @@
   <title>Sign Up</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body class="signup-page">
   <div class="cardform">
