@@ -46,7 +46,6 @@ session_start();
       "gender" => $gender,
       "role" => "customer"
     ];
-    
     header("Location: menu.php");
     exit();
   }

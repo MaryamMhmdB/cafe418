@@ -11,9 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if ($_SESSION[$email]['password'] === $pass) {
         header("Location: menu.php");
       }
-      //fix wrong pass
+      $error = "Password and\or email is not correct" ;
         }
-    } //fix empty input
+    } 
+    $error =  "Please fill all inputs";
   }
 
 ?>
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="login-page">
 <div class="cardform">
 
-    <form class="form" action="menu.php" method="POST">
+    <form class="form" action="login.php" method="POST">
     <h2>Sign in</h2>
 
     <input name= "usrEmail" type="email" placeholder="Email">
@@ -41,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   </form>
 
+    <?php if (isset($error)) { ?>
+      <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+    <?php } ?>
 </div>
 
 </body>
