@@ -2,9 +2,8 @@
 require_once('config.inc.php');
 require_once('fetch.php');
 session_start();
-$_SESSION['role'] = "customer";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name     = trim($_POST["usrName"]);
   $email    = trim($_POST["usrEmail"]);
   $pass     = trim($_POST["usrPass"]);
@@ -18,10 +17,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $error = "Email is required";
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $error = "Invalid email format";
+  } 
+  elseif (True) { //I want it to always enter here
+    foreach ($i as $key ) {
+      if ($i == $email){
+        $error = "This email is already registered, try sign in";
+      }
+    }
   } elseif (empty($pass)) {
     $error = "Password is required";
-  } elseif (strlen($pass) < 6) {
-    $error = "Password must be at least 6 characters";
+  } elseif (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $pass)) {
+    $error = "Password must be 8+ characters and include uppercase, lowercase, numbers, and symbols (@$!%*?&).";
   } elseif ($pass !== $confPass) {
     $error = "Passwords do not match";
   } elseif (empty($tel)) {
@@ -32,13 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $error = "Please select a gender";
   } else {
 
-    $_SESSION["usrObj"] = [
+    $_SESSION[$email] = [
       "name"   => $name,
       "email"  => $email,
       "password" => $pass,
       "tel"    => $tel,
-      "gender" => $gender
+      "gender" => $gender,
+      "role" => "customer"
     ];
+    
     header("Location: menu.php");
     exit();
   }

@@ -2,9 +2,21 @@
   require_once('config.inc.php');
   require_once('fetch.php');
   session_start();
-  $_SESSION['role']="customer";
-?>
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $email    = trim($_POST["usrEmail"]);
+  $pass     = trim($_POST["usrPass"]);
+  if(!empty($email)&&!empty($pass)){
+    if (isset($_SESSION[$email])) {
+      if ($_SESSION[$email]['password'] === $pass) {
+        header("Location: menu.php");
+      }
+      //fix wrong pass
+        }
+    } //fix empty input
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="mnna">
 <head>
@@ -15,7 +27,7 @@
 <body class="login-page">
 <div class="cardform">
 
-    <form class="form" action="menu.php" method="get">
+    <form class="form" action="menu.php" method="POST">
     <h2>Sign in</h2>
 
     <input name= "usrEmail" type="email" placeholder="Email">
