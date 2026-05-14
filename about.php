@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
-    
 </head>
 
 <body class="about-page">
@@ -15,7 +14,7 @@
     <div class="cardform">
         <h1>About Us</h1>
         <p>
-            Welcome to our 418 Café project! This project was developed by a talented group of students working together to create a unique and creative café concept.
+            Welcome to our 418 Café project! This project was developed by a talented group of students working together to create a unique and creative café website.
         </p>
         <p>Implemented by:</p>
 
