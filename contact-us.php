@@ -57,90 +57,125 @@ session_start();
         </div>
     </section>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+<script>
 
-            // Get form values
-            const name = document.getElementById('userName').value.trim();
-            const email = document.getElementById('userEmail').value.trim();
-            const message = document.getElementById('userMessage').value.trim();
+const form = document.getElementById('contactForm');
 
-            // Get error spans
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const messageError = document.getElementById('messageError');
+const userName = document.getElementById('userName');
+const userEmail = document.getElementById('userEmail');
+const userMessage = document.getElementById('userMessage');
 
-            // Reset error messages
-            nameError.textContent = "";
-            emailError.textContent = "";
-            messageError.textContent = "";
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
 
-            let isValid = true;
 
-            // Name Validation
-            const namePattern = /^[a-zA-Z\s]+$/;
-            if (name === "") {
-                nameError.textContent = "Please enter your name";
-                isValid = false;
-            } else if (name.length <= 3) {
-                nameError.textContent = "Name must be more than 3 characters";
-                isValid = false;
-            } else if (!namePattern.test(name)) {
-                nameError.textContent = "Name must not contain numbers";
-                isValid = false;
-            }
+form.addEventListener('submit', function(e) {
 
-            // Email Detailed Validation
-            const emailParts = email.split('@');
-            const beforeAt = emailParts[0] || "";
-            const allowedProviders = ['gmail', 'outlook', 'yahoo', 'hotmail', 'icloud'];
+    e.preventDefault();
 
-            if (email === "") {
-                emailError.textContent = "Please enter your email";
-                isValid = false;
-            } 
-            // Check for @ symbol and domain part
-            else if (!email.includes('@') || emailParts.length < 2) {
-                emailError.textContent = "Email must contain '@' and a valid domain";
-                isValid = false;
-            }
-            // Check if email starts with a number
-            else if (/^\d/.test(email)) {
-                emailError.textContent = "Email must not start with a number";
-                isValid = false;
-            }
-            // Check minimum length before @
-            else if (beforeAt.length < 5) {
-                emailError.textContent = "The part before '@' must be at least 5 characters";
-                isValid = false;
-            }
-            // Check for valid provider and .com ending
-            else {
-                const domainPart = emailParts[1];
-                const isProviderValid = allowedProviders.some(p => domainPart.startsWith(p + ".com"));
-                
-                if (!isProviderValid) {
-                    emailError.textContent = "Use a valid provider (gmail, outlook, yahoo, etc.) ending with .com";
-                    isValid = false;
-                }
-            }
+    let isValid = true;
 
-            // Message Validation
-            if (message === "") {
-                messageError.textContent = "Please enter your message";
-                isValid = false;
-            } else if (message.length < 5) {
-                messageError.textContent = "Message must be at least 5 characters";
-                isValid = false;
-            }
 
-            // Final check
-            if (isValid) {
-                alert("Message sent successfully!");
-                this.reset();
-            }
-        });
-    </script>
+    // Clear old errors
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+    messageError.innerHTML = "";
+
+    userName.style.border = "";
+    userEmail.style.border = "";
+    userMessage.style.border = "";
+
+
+    // Name Validation
+    const namePattern = /^[a-zA-Z\s]+$/;
+
+    if(userName.value.trim() === "") {
+
+        userName.style.border = "2px solid red";
+
+        nameError.innerHTML =
+        "⚠ Please enter your name.";
+
+        isValid = false;
+
+    } else if(userName.value.trim().length < 4) {
+
+        userName.style.border = "2px solid red";
+
+        nameError.innerHTML =
+        "⚠ Name must be at least 4 characters.";
+
+        isValid = false;
+
+    } else if(!namePattern.test(userName.value.trim())) {
+
+        userName.style.border = "2px solid red";
+
+        nameError.innerHTML =
+        "⚠ Name must contain letters only.";
+
+        isValid = false;
+    }
+
+
+    // Email Validation
+    const email = userEmail.value.trim();
+
+    const emailPattern =
+    /^[a-zA-Z][a-zA-Z0-9._%+-]{4,}@(gmail|outlook|hotmail|yahoo|icloud)\.com$/;
+
+    if(email === "") {
+
+        userEmail.style.border = "2px solid red";
+
+        emailError.innerHTML =
+        "⚠ Please enter your email.";
+
+        isValid = false;
+
+    } else if(!emailPattern.test(email)) {
+
+        userEmail.style.border = "2px solid red";
+
+        emailError.innerHTML =
+        "⚠ Enter a valid email ending with .com.";
+
+        isValid = false;
+    }
+
+
+    // Message Validation
+    if(userMessage.value.trim() === "") {
+
+        userMessage.style.border = "2px solid red";
+
+        messageError.innerHTML =
+        "⚠ Please enter your message.";
+
+        isValid = false;
+
+    } else if(userMessage.value.trim().length < 5) {
+
+        userMessage.style.border = "2px solid red";
+
+        messageError.innerHTML =
+        "⚠ Message must be at least 5 characters.";
+
+        isValid = false;
+    }
+
+
+    // Success
+    if(isValid) {
+
+        alert("Message sent successfully!");
+
+        form.reset();
+    }
+
+});
+
+</script>
 </body>
 </html>
