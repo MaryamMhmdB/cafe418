@@ -149,48 +149,223 @@ foreach ($error_items as $item) {
     <?php } ?>
 </div>
 
-<form method="POST">
+
+<form method="POST" id="paymentForm">
+
+
     <div class="cart-section">
+
         <h3>📍 Location</h3>
+
         <label>Street *</label>
-        <select name="street" required >
+
+        <select name="street" required>
+
             <option value="">Select street</option>
+
             <option>Al Shati</option>
+
             <option>Al Faisaliyah</option>
+
             <option>Al Muhammadiyah</option>
+
             <option>Al Rakah</option>
+
             <option>Al Aziziyah</option>
+
         </select>
+
     </div>
 
     <div class="cart-section">
-        <h3 >💳 Payment</h3>
+
+        <h3>💳 Payment</h3>
+
         <label>Card Name *</label>
-        <input type="text" name="card_name" required >
+
+        <input type="text"
+               name="card_name"
+               id="card_name"
+               required>
+
+        <span id="nameError"
+              style="color:red;"></span>
+
         <label>Card Number *</label>
-        <input type="text" name="card_number" maxlength="16" pattern="\d{16}" required >
-        <div >
-           <div>
-    <label>Expiry *</label>
-    <input type="month" name="expiry" id="expiry" required>
-    <span id="error" style="color:red;"></span>
-</div>
-            <div ><label>CVV *</label><input type="text" name="cvv" maxlength="3" pattern="\d{3}" required ></div>
+
+        <input type="text"
+               name="card_number"
+               id="card_number"
+               maxlength="16"
+               required>
+
+        <span id="cardError"
+              style="color:red;"></span>
+
+
+        <div>
+
+            <div>
+
+                <label>Expiry *</label>
+
+                <input type="month"
+                       name="expiry"
+                       id="expiry"
+                       required>
+
+                <span id="expiryError"
+                      style="color:red;"></span>
+
+            </div>
+
+
+            <div>
+
+                <label>CVV *</label>
+
+                <input type="text"
+                       name="cvv"
+                       id="cvv"
+                       maxlength="3"
+                       required>
+
+                <span id="cvvError"
+                      style="color:red;"></span>
+
+            </div>
+
         </div>
+
     </div>
 
-    <div class="cart-section" >
-        <button class="btn" type="submit" name="buy_now" >Buy Now</button>
+
+    <div class="cart-section">
+
+        <button class="btn"
+                type="submit"
+                name="buy_now">
+
+            Buy Now
+
+        </button>
+
     </div>
+
 </form>
+
+
+
 <script>
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
 
-    document.getElementById("expiry").min = `${year}-${month}`;
+const form = document.getElementById("paymentForm");
+
+const cardName = document.getElementById("card_name");
+const cardNumber = document.getElementById("card_number");
+const expiry = document.getElementById("expiry");
+const cvv = document.getElementById("cvv");
+
+const nameError = document.getElementById("nameError");
+const cardError = document.getElementById("cardError");
+const expiryError = document.getElementById("expiryError");
+const cvvError = document.getElementById("cvvError");
+
+
+const today = new Date();
+
+const year = today.getFullYear();
+
+const month =
+String(today.getMonth() + 1).padStart(2, '0');
+
+expiry.min = `${year}-${month}`;
+
+
+
+form.addEventListener("submit", function(e){
+
+    let valid = true;
+
+
+
+    nameError.innerHTML = "";
+    cardError.innerHTML = "";
+    expiryError.innerHTML = "";
+    cvvError.innerHTML = "";
+
+    cardName.style.border = "";
+    cardNumber.style.border = "";
+    expiry.style.border = "";
+    cvv.style.border = "";
+
+
+    if(cardName.value.trim() === ""){
+
+        cardName.style.border =
+        "2px solid red";
+
+        nameError.innerHTML =
+        "⚠ Card name is required.";
+
+        valid = false;
+    }
+
+
+    // Card Number
+    if(!/^\d{16}$/.test(cardNumber.value)){
+
+        cardNumber.style.border =
+        "2px solid red";
+
+        cardError.innerHTML =
+        "⚠ Card number must contain exactly 16 digits.";
+
+        valid = false;
+    }
+
+
+    // CVV
+    if(!/^\d{3}$/.test(cvv.value)){
+
+        cvv.style.border =
+        "2px solid red";
+
+        cvvError.innerHTML =
+        "⚠ CVV must contain exactly 3 digits.";
+
+        valid = false;
+    }
+
+
+    // Expiry
+    const selectedDate =
+    new Date(expiry.value + "-01");
+
+    const currentDate =
+    new Date(year, today.getMonth(), 1);
+
+
+    if(expiry.value === "" ||
+       selectedDate < currentDate){
+
+        expiry.style.border =
+        "2px solid red";
+
+        expiryError.innerHTML =
+        "⚠ Please select a valid future expiry month.";
+
+        valid = false;
+    }
+
+
+    // Prevent submit
+    if(!valid){
+        e.preventDefault();
+    }
+
+});
+
 </script>
-
 
 </body>
 </html>
