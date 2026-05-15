@@ -170,7 +170,11 @@ foreach ($error_items as $item) {
         <label>Card Number *</label>
         <input type="text" name="card_number" maxlength="16" pattern="\d{16}" required >
         <div >
-            <div ><label>Expiry *</label><input type="month" name="expiry" required ></div>
+           <div>
+    <label>Expiry *</label>
+    <input type="month" name="expiry" id="expiry" required>
+    <span id="error" style="color:red;"></span>
+</div>
             <div ><label>CVV *</label><input type="text" name="cvv" maxlength="3" pattern="\d{3}" required ></div>
         </div>
     </div>
@@ -179,6 +183,14 @@ foreach ($error_items as $item) {
         <button class="btn" type="submit" name="buy_now" >Buy Now</button>
     </div>
 </form>
+<script>
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+
+    document.getElementById("expiry").min = `${year}-${month}`;
+</script>
+
 
 </body>
 </html>
