@@ -2,6 +2,7 @@
 require_once('config.inc.php');
 require_once('fetch.php');
 session_start();
+$_SESSION['role'] = "customer";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name     = trim($_POST["usrName"]);
@@ -10,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $confPass = trim($_POST["usrConfPass"]);
   $tel      = trim($_POST["usrTel"]);
   $gender   = $_POST["gender"] ?? '';
-
   // Validation
   if (empty($name)) {
     $error = "Name is required";
@@ -18,17 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $error = "Email is required";
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $error = "Invalid email format";
-  } else{ //I want it to always enter here
-    foreach ($_SESSION as $value) {
-      if ($value === $email) {
-        $error = "This email is already registered, try login instead!";
-        break; // Stop the loop once found
-      }
-    }
-  } if (empty($pass)) {
+  } elseif (empty($pass)) {
     $error = "Password is required";
-  } elseif (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $pass)) {
-    $error = "Password must be 8+ characters and include uppercase, lowercase, numbers, and symbols (@$!%*?&).";
+  } elseif (strlen($pass) < 6) {
+    $error = "Password must be at least 6 characters";
   } elseif ($pass !== $confPass) {
     $error = "Passwords do not match";
   } elseif (empty($tel)) {
@@ -39,14 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $error = "Please select a gender";
   } else {
 
-    $_SESSION[$email] = [
+    $_SESSION["usrObj"] = [
       "name"   => $name,
       "email"  => $email,
       "password" => $pass,
       "tel"    => $tel,
-      "gender" => $gender,
-      "role" => "customer" // ,
-      //key => value 
+      "gender" => $gender
     ];
     header("Location: menu.php");
     exit();

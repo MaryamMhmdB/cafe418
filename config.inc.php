@@ -1,10 +1,10 @@
 <?php
 
 define('DBHOST', 'localhost');
-define('DBNAME', 'CAFE418DB');
+define('DBNAME', 'cafe418db');
 define('DBUSER', 'root');
-define('DBPASS', '123123');
-define('DBPORT', '3307');
+define('DBPASS', '');
+define('DBPORT', '3306');
 
 define(
        'DBCONNSTRING',

@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include "fetch.php";
+$orders = getUserOrders();
+?>
 <!DOCTYPE html>
 <html lang="en" class="bushra">
 <head>
@@ -29,77 +35,44 @@
     <button>Update Profile</button>
   </div>
 
-  <div class="orders-container">
+<?php if(empty($orders)): ?>
 
-    <div class="orders-header">
-      <h2>📦 Previous Orders</h2>
+<p >No previous orders yet.</p>
+
+<?php else: ?>
+
+<?php foreach($orders as $order): ?>
+
+<details class="order-card">
+  <summary>
+    <div class="order-header">
+      Order #<?= $order['id'] ?>
+    </div>
+  </summary>
+
+  <div class="order-details">
+
+    <span class="header-date">
+      📅 <?= $order['date'] ?>
+    </span>
+
+    <?php foreach($order['items'] as $item): ?>
+        <div class="item">
+            <span><?= $item['name'] ?></span>
+            <span><?= number_format($item['price'] * $item['quantity'],2) ?> SAR</span>
+        </div>
+    <?php endforeach; ?>
+
+    <div class="total">
+        💰 Total: <?= number_format($order['total'],2) ?> SAR
     </div>
 
-    <details class="order-card">
-      <summary>
-        <div class="order-header">
-          <span>Order #1004</span>
-        </div>
-      </summary>
-
-      <div class="order-details">
-        <span class="header-date"> 📅 17th April 2026 </span> 
-        <div class="item"><span>☕ Iced Latte</span><span>21.40 SAR</span></div>
-        <div class="item"><span>☕ Cappuccino</span><span>17.30 SAR</span></div>
-        <div class="item"><span>🍫 Chocolate Brownie</span><span>15.60 SAR</span></div>
-        <div class="total">💰 Total: 54.30 SAR</div>
-      </div>
-    </details>
-
-    <details class="order-card">
-      <summary>
-        <div class="order-header">
-          <span>Order #1003</span>
-        </div>
-      </summary>
-
-      <div class="order-details">
-        <span class="header-date"> 📅 14th April 2026 </span> 
-        <div class="item"><span>☕ Iced Americano</span><span>16.10 SAR</span></div>
-        <div class="item"><span>☕ Flat White</span><span>18.00 SAR</span></div>
-        <div class="item"><span>🍪 Cookies</span><span>8.10 SAR</span></div>
-        <div class="total">💰 Total: 42.20 SAR</div>
-      </div>
-    </details>
-
-    <details class="order-card">
-      <summary>
-        <div class="order-header">
-          <span>Order #1002</span>
-        </div>
-      </summary>
-
-      <div class="order-details">
-        <span class="header-date"> 📅 10th April 2026 </span> 
-        <div class="item"><span>🍵 Matcha Latte</span><span>21.80 SAR</span></div>
-        <div class="item"><span>☕ Iced Mocha</span><span>19.50 SAR</span></div>
-        <div class="item"><span>🥐 Almond Croissant</span><span>19.70 SAR</span></div>
-        <div class="total">💰 Total: 61.00 SAR</div>
-      </div>
-    </details>
-
-    <details class="order-card">
-      <summary>
-        <div class="order-header">
-          <span>Order #1001</span>
-        </div>
-      </summary>
-
-      <div class="order-details">
-        <span class="header-date"> 📅 1st April 2026 </span> 
-        <div class="item"><span>☕ Espresso</span><span>13.10 SAR</span></div>
-        <div class="item"><span>☕ Cortado</span><span>15.80 SAR</span></div>
-        <div class="item"><span>🍪 Cookies</span><span>9.50 SAR</span></div>
-        <div class="total">💰 Total: 38.40 SAR</div>
-      </div>
-    </details>
-
   </div>
+</details>
+
+<?php endforeach; ?>
+
+<?php endif; ?>
 
 </div>
 
