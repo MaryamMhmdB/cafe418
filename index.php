@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="mm">
 
@@ -11,9 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +18,7 @@
   <section class="home" id="home">
     <div class="container">
 
-    <?php include "navbar.php" ?>
+      <?php include "navbar.php" ?>
 
       <div class="home-content">
         <div class="left">
@@ -59,33 +56,41 @@
       </div>
 
     </div>
-
   </section>
+
   <section class="best-sellers">
     <h2 class="title">our signature collection</h2>
 
     <div class="coffee-container">
-      <div class="coffee-item">
-        <img src="./images/iced-latte.png" alt="Iced Latte">
-        <span class="coffee-name">Iced Latte</span>
-      </div>
+      
+      <a href="Product_details.php?id=15" class="coffee-item-link" style="text-decoration: none; color: inherit;">
+        <div class="coffee-item">
+          <img src="./images/iced-latte.png" alt="Iced Latte">
+          <span class="coffee-name">Iced Latte</span>
+        </div>
+      </a>
 
-      <div class="coffee-item">
-        <img src="./images/Iced-Caramel-Macchiato.png" alt="Caramel Macchiato">
-        <span class="coffee-name">Caramel Macchiato</span>
-      </div>
+      <a href="Product_details.php?id=16" class="coffee-item-link" style="text-decoration: none; color: inherit;">
+        <div class="coffee-item">
+          <img src="./images/Iced-Caramel-Macchiato.png" alt="Caramel Macchiato">
+          <span class="coffee-name">Caramel Macchiato</span>
+        </div>
+      </a>
 
-      <div class="coffee-item">
-        <img src="./images/iced-americano.png" alt="Iced Coffee">
-        <span class="coffee-name">Iced Americano</span>
-      </div>
+      <a href="Product_details.php?id=17" class="coffee-item-link" style="text-decoration: none; color: inherit;">
+        <div class="coffee-item">
+          <img src="./images/iced-americano.png" alt="Iced Coffee">
+          <span class="coffee-name">Iced Americano</span>
+        </div>
+      </a>
 
-      <div class="coffee-item">
-        <img src="./images/iced-mocha.png" alt="Iced Mocha">
-        <span class="coffee-name">Iced Mocha</span>
-      </div>
+      <a href="Product_details.php?id=30" class="coffee-item-link" style="text-decoration: none; color: inherit;">
+        <div class="coffee-item">
+          <img src="./images/iced-mocha.png" alt="Iced Mocha">
+          <span class="coffee-name">Iced Mocha</span>
+        </div>
+      </a>
 
-    </div>
     </div>
   </section>
 
@@ -99,12 +104,11 @@
         <p>
           A perfect blend of creamy matcha and fresh strawberry sweetness.<br> Refreshing, smooth, and made to elevate your day.
         </p>
-        <a href="Product_details.php" class="btn">Try It Now</a>
+        <a href="Product_details.php?id=18" class="btn">Try It Now</a>
       </div>
 
     </div>
   </section>
-
 
 </body>
 
