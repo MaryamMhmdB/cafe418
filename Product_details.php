@@ -159,7 +159,7 @@ $total = $subtotal + $vat;
                     <div class="price" id="live-price">
                         <?= number_format($base_price,2) ?> SAR
                     </div>
-                    <div class="old-price">22 SAR</div>
+                    <div class="old-price">28 SAR</div>
                 </div>
 
                 <p class="description">
