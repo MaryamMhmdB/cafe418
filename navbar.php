@@ -1,23 +1,17 @@
 <?php
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
 $initialCount = 0;
-
 if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
-
     foreach ($_SESSION['cart'] as $item) {
-
         if (isset($item['quantity'])) {
             $initialCount += (int)$item['quantity'];
         }
     }
 }
-
 ?>
-
 <style>
 
 .cart-icon {
@@ -54,45 +48,32 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
 }
 
 </style>
-
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <nav class="navbar">
-
     <div class="nav-left">
-
         <img src="./images/theLogo.png" alt="CAFé 418 Logo" class="logo">
-
         <div class="nav-links">
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
             <a href="about.php">About us</a>
             <a href="contact-us.php">Contact us</a>
         </div>
-
     </div>
 
     <div class="nav-icons">
 
-        <a href="#">
-            <img src="./images/icons/search.png" class="icon-img" alt="Search">
-        </a>
-
         <a href="cart.php" class="cart-icon">
-
             <img src="./images/icons/cart.png" class="icon-img" alt="Cart">
-
-            <span id="cart-count"
-            style="display: <?= $initialCount > 0 ? 'flex' : 'none' ?>;">
-
+            <span id="cart-count" style="display: <?= $initialCount > 0 ? 'flex' : 'none' ?>;">
                 <?= $initialCount ?>
-
             </span>
-
         </a>
 
         <a href="profile.php">
             <img src="./images/icons/profile.png" class="icon-img" alt="Profile">
         </a>
-
     </div>
-
 </nav>
